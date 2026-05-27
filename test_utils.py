@@ -2,7 +2,9 @@ import pytest
 import utils
 
 
-@pytest.mark.parametrize("a, b, expected", [(1, 2, 3), (2, 3, 5), (3, 4, 7), (4, 5, 9)])
+@pytest.mark.parametrize(
+    "a, b, expected", [(1, 2, 3), (2, 3, 5), (3, 4, 7), (4, 5, 9)]
+)
 def test_add(a, b, expected):
     result = utils.add(a, b)
     assert result == expected
@@ -24,7 +26,9 @@ def test_multiply(a, b, expected):
     assert result == expected
 
 
-@pytest.mark.parametrize("a, b, expected", [(1, 2, 0.5), (3, 4, 0.75), (4, 5, 0.8)])
+@pytest.mark.parametrize(
+    "a, b, expected", [(1, 2, 0.5), (3, 4, 0.75), (4, 5, 0.8)]
+)
 def test_divide(a, b, expected):
     result = utils.divide(a, b)
     assert result == expected
